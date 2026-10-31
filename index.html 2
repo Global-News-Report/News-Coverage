@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sangue</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            position: relative;
+            display: inline-block;
+        }
+
+        img {
+            width: 700px;
+        }
+
+        .pista {
+            position: absolute;
+            left: 255px; /* posição da palavra */
+            top: 807px;
+
+            color: rgb(73, 73, 73);
+            text-decoration: none;
+            font-size: 38px;
+            font-family: Grenze;
+        }
+
+        .pista:hover {
+            color: rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <img src="Sangue.jpeg" alt="Primeira pista">
+
+    <a class="pista" href="Nome4.jpeg">
+        corpore
+    </a>
+</div>
+
+</body>
+</html>
