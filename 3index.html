@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #000;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .imagem {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        #entrada {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.65);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        #entrada button {
+            background: transparent;
+            color: white;
+            border: 1px solid white;
+            padding: 15px 30px;
+            font-size: 16px;
+            letter-spacing: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <img src="Voz.jpeg" class="imagem">
+
+    <audio id="som" loop>
+        <source src="Ouça.wav" type="audio/mpeg">
+    </audio>
+
+    <div id="entrada">
+        <button onclick="entrar()">סֵבֶל</button>
+    </div>
+
+    <script>
+        function entrar() {
+            const audio = document.getElementById("som");
+
+            audio.play().then(() => {
+                document.getElementById("entrada").style.display = "none";
+            }).catch(() => {
+                alert("Não foi possível reproduzir o áudio.");
+            });
+        }
+    </script>
+
+</body>
+</html>
